@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div id="dropArea" class="drop-area">
+    <p>Glissez-déposez un fichier JSON ici ou cliquez pour le sélectionner.</p>
+    <input type="file" id="fileInput" accept=".json">
+</div>
+
+<table id="jsonData">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titre</th>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Les données seront affichées ici -->
+    </tbody>
+ </table> 
+  <div id="editPopup" class="hidden">
+    <h3>Modifier les données</h3>
+    <form>
+        <input type="text" id="editId" placeholder="ID">
+        <input type="text" id="editTitre" placeholder="Titre">
+        <input type="text" id="editDateDebut" placeholder="Date de Début">
+        <input type="text" id="editDateFin" placeholder="Date de Fin">
+      <div contenteditable="true" id="editDescription" placeholder="Description"></div>
+    
+    <button id="saveEditButton">Enregistrer</button>
+    <button id="cancelEditButton">Annuler</button></form>
+</div>
+  
+<script src="./index.js"></script>
+</body>
+</html>
